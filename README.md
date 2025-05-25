@@ -27,6 +27,20 @@ Todo esto en una experiencia accesible, rápida y centrada en el usuario.
 
 ---
 
+## 🛠️ Tecnologías utilizadas
+
+⚠️ *Este proyecto está en desarrollo. Las tecnologías pueden expandirse o ajustarse durante el proceso.*
+
+### Frontend
+- **React + Next.js** — Framework moderno para aplicaciones web SSR/CSR
+- **Tailwind CSS** — Utilidades para estilos rápidos y personalizables
+- **Shadcn UI** *(planeado)* — Componentes accesibles y bien diseñados para mejorar la experiencia visual y de desarrollo
+
+### Backend
+- **Node.js + Express** — API REST ligera y rápida
+- **Prisma ORM** — Modelado de base de datos eficiente y tipado
+- **PostgreSQL** — Base de datos relacional robusta
+- **Supabase** — Despliegue y gestión de base de datos (actualmente en uso)
 ## 💡 ¿Por qué este proyecto?
 
 Muchas veces buscamos un servicio cerca y confiamos en grandes plataformas impersonales, pero olvidamos que a la vuelta de la esquina hay negocios increíbles esperando ser descubiertos. LocalBiz Directory quiere cambiar eso.
