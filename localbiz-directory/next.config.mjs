@@ -5,8 +5,8 @@ const nextConfig = {
     formats: ['image/webp', 'image/avif'],
   },
   experimental: {
-    serverActions: true,
-  },
+    serverActions: {}
+  }
 };
 
 export default nextConfig;
