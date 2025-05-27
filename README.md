@@ -1,4 +1,4 @@
-# 🌍 LocalBiz Directory
+# 🌍 Revlo Directory
 
 **Conectando personas con negocios locales de forma inteligente**
 
@@ -6,7 +6,7 @@
 
 ## Visión
 
-En un mundo cada vez más digitalizado, los pequeños negocios locales siguen siendo el alma de nuestras comunidades. LocalBiz Directory nace con una misión clara: **dar visibilidad a esos negocios que hacen de cada barrio un lugar único**.
+En un mundo cada vez más digitalizado, los pequeños negocios locales siguen siendo el alma de nuestras comunidades. Revlo Directory nace con una misión clara: **dar visibilidad a esos negocios que hacen de cada barrio un lugar único**.
 
 Queremos ofrecer una plataforma moderna, ágil e intuitiva que no solo muestre negocios locales, sino que los conecte directamente con las personas que los necesitan, en el momento justo y en el lugar adecuado.
 
@@ -67,5 +67,5 @@ Este proyecto se encuentra en sus primeras fases de desarrollo, y se irá constr
 
 ## 🙌 Gracias por visitar este proyecto
 
-LocalBiz Directory no solo es una aplicación web, es una declaración de principios: **apostar por lo local, usando lo mejor de la tecnología.**
+Revlo Directory no solo es una aplicación web, es una declaración de principios: **apostar por lo local, usando lo mejor de la tecnología.**
 
