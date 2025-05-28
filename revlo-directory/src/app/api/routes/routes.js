@@ -99,6 +99,7 @@ try {
       features,
       categoryId,
     } = req.body
+
   const updateBusiness = await prisma.business.update({
     where: {
         id
@@ -138,4 +139,9 @@ try {
 } catch (error) {
     next(error)
 }
+})
+
+myRouter.get("/test", async (req, res) => {
+  console.log("TEST endpoint hit ✅")
+  res.json({ message: "Funciona correctamente 🎉" })
 })

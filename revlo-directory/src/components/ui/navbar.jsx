@@ -11,8 +11,8 @@ export default function Navbar({ filters, setFilters, categories = [] }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2 text-xl font-bold tracking-tight">
-          <MapPin className="w-6 h-6 text-primary" />
             Revlo
+            <MapPin className="w-6 h-6 text-primary" />
           </Link>
           <div className="flex items-center space-x-4">
             <SearchBar filters={filters} onSearch={setFilters} categories={categories} />

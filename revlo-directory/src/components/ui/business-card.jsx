@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from "next/image"
 import { CheckCircle2, Globe, Phone } from "lucide-react"
+import { Badge } from "@/components/ui/badge"
 
 export function BusinessCard({ business}) {
 
@@ -35,7 +36,7 @@ export function BusinessCard({ business}) {
         </div>
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
           {Icon && <Icon className="w-4 h-4" />}
-          <span>{category?.name}</span>
+          <Badge variant="outline">{category?.name}</Badge>
         </div>
         <p className="text-sm text-muted-foreground">{address}</p>
       </CardHeader>

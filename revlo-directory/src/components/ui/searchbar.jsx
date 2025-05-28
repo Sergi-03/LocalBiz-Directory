@@ -35,12 +35,12 @@ export default function SearchBar({ filters = { searchTerm: "", selectedCategory
         placeholder="Search business..."
         value={searchTerm}
         onChange={handleSearchChange}
-        className="border p-1 rounded outline"
+        className="border p-1 rounded outline placeholder:text-muted-foreground placeholder:text-sm "
       />
 
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <button className="border rounded text-sm p-1.5 text-left outline">
+          <button className="border rounded text-sm p-1.5 text-left outline text-muted-foreground">
             {selectedCategoryName}
           </button>
         </DropdownMenuTrigger>

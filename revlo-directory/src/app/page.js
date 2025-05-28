@@ -3,7 +3,8 @@
 import { useEffect, useState } from "react"
 import { BusinessCard } from "@/components/ui/business-card"
 import { supabase } from "@/lib/supabaseClient"
-import Navbar from "@/components/navbar"
+import Navbar from "@/components/ui/navbar"
+import BusinessMap from "@/components/ui/business-map"
 
 export default function HomePage() {
   const [allBusinesses, setAllBusinesses] = useState([])
@@ -65,6 +66,9 @@ export default function HomePage() {
       <Navbar filters={filters} setFilters={setFilters} categories={categories} />
       <section className="p-6">
         <h2 className="text-2xl font-bold mb-6">Discover businesses near you</h2>
+        <div className="mb-8">
+          <BusinessMap businesses={filteredBusinesses} />
+        </div>
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {filteredBusinesses.length > 0 ? (
             filteredBusinesses.map((biz) => (
