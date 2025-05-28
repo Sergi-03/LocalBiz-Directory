@@ -140,8 +140,3 @@ try {
     next(error)
 }
 })
-
-myRouter.get("/test", async (req, res) => {
-  console.log("TEST endpoint hit ✅")
-  res.json({ message: "Funciona correctamente 🎉" })
-})
