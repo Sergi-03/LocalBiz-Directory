@@ -141,15 +141,18 @@ try {
 }
 })
 
-myRouter.get("/reviews/:id", async (req, res, next) => {
+myRouter.get("/reviews/business/:businessId", async (req, res, next) => {
 try {
-    const {id} = req.params
-    const getReview = await prisma.review.findUnique({
+    const {businessId} = req.params
+    const reviews = await prisma.review.findMany({
         where: {
-            id
+            businessId
+        },
+        orderBy: {
+            createdAt: "desc"
         }
     })
-    res.json(getReview)
+    res.json(reviews)
 } catch (error) {
     next(error)
 }
