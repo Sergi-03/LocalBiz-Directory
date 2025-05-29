@@ -2,6 +2,7 @@ import Navbar from "@/components/ui/navbar"
 import BusinessChart from "@/components/ui/business-chart"
 import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"
+import { Badge } from "@/components/ui/badge"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { CheckCircle2, Globe, Phone } from "lucide-react"
 
