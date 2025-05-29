@@ -2,10 +2,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from "next/image"
 import { CheckCircle2, Globe, Phone } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
+import Link from "next/link"
 
 export function BusinessCard({ business}) {
 
    const {
+    id,
     name,
     address,
     phone,
@@ -21,6 +23,7 @@ export function BusinessCard({ business}) {
 
   return (
      <Card className="w-full max-w-sm border border-border rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 p-0">
+       <Link href={`/business/${id}`} className="block">
       <div className="relative w-full h-40">
         <Image
           src={imageUrl}
@@ -29,9 +32,9 @@ export function BusinessCard({ business}) {
           className="object-cover"
         />
       </div>
-      <CardHeader className="pb-2">
+      <CardHeader className="pb-2 gap-[20px]">
         <div className="flex items-center justify-between">
-          <CardTitle className="text-lg font-semibold">{name}</CardTitle>
+          <CardTitle className="text-lg font-semibold mt-[15px]">{name}</CardTitle>
           {verified && <CheckCircle2 className="text-green-500 w-5 h-5 shrink-0" title="Verified" />}
         </div>
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -40,6 +43,8 @@ export function BusinessCard({ business}) {
         </div>
         <p className="text-sm text-muted-foreground">{address}</p>
       </CardHeader>
+      </Link>
+
       <CardContent className="flex flex-col gap-[2px] text-sm px-4 pb-2 gap-3">
         {phone && (
           <div className="flex items-center gap-2">

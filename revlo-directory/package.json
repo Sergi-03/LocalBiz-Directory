@@ -26,7 +26,11 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-leaflet": "^5.0.0",
+    "recharts": "^2.15.3",
     "tailwind-merge": "^3.3.0"
+  },
+  "overrides": {
+  "react-is": "^19.0.0-rc-69d4b800-20241021"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

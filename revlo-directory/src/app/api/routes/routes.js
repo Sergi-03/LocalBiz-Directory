@@ -140,3 +140,42 @@ try {
     next(error)
 }
 })
+
+myRouter.get("/reviews/:id", async (req, res, next) => {
+try {
+    const {id} = req.params
+    const getReview = await prisma.review.findUnique({
+        where: {
+            id
+        }
+    })
+    res.json(getReview)
+} catch (error) {
+    next(error)
+}
+})
+
+myRouter.post("/reviews", async (req, res, next) => {
+try {
+    const {
+     name,
+     email,
+     rating,
+     comment,
+     businessId
+    } = req.body
+
+    const createReview = await prisma.review.create({
+        data: {
+            name,
+            email,
+            rating: parseInt(rating),
+            comment,
+            businessId
+        }
+    })
+    res.json(createReview)
+} catch (error) {
+   next(error) 
+}
+})
