@@ -5,6 +5,7 @@ import { BusinessCard } from "@/components/ui/business-card"
 import { supabase } from "@/lib/supabaseClient"
 import Navbar from "@/components/ui/navbar"
 import BusinessMap from "@/components/ui/business-map"
+import { Fqa } from "@/components/ui/fqa"
 
 export default function HomePage() {
   const [allBusinesses, setAllBusinesses] = useState([])
@@ -18,7 +19,7 @@ export default function HomePage() {
     const fetchBusinesses = async () => {
       const { data, error } = await supabase
         .from("businesses")
-        .select("id, name, slug, images, phone, website, verified, description, address, category:categoryId(name, slug)")
+        .select("id, name, slug, images, phone, website, email, verified, description, address, category:categoryId(name, slug)")
 
       if (error) {
         setError(error.message)
@@ -79,6 +80,7 @@ export default function HomePage() {
           )}
         </div>
       </section>
+      <Fqa/>
     </>
   )
 }

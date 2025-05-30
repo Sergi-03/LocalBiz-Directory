@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from "next/image"
-import { CheckCircle2, Globe, Phone } from "lucide-react"
+import { CheckCircle2, Globe, Phone, Mail } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 
@@ -11,6 +11,7 @@ export function BusinessCard({ business}) {
     name,
     address,
     phone,
+    email,
     website,
     images,
     verified,
@@ -50,6 +51,12 @@ export function BusinessCard({ business}) {
           <div className="flex items-center gap-2">
             <Phone className="w-4 h-4 text-muted-foreground" />
             <span>{phone}</span>
+          </div>
+        )}
+        {email && (
+          <div className="flex items-center gap-2">
+            <Mail className="w-4 h-4 text-muted-foreground" />
+            <span>{email}</span>
           </div>
         )}
         {website && (

@@ -6,7 +6,7 @@ import { Toaster } from "@/components/ui/sonner"
 import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { CheckCircle2, Globe, Phone } from "lucide-react"
+import { CheckCircle2, Globe, Phone, Mail } from "lucide-react"
 
 async function getBusiness(id) {
   const res = await fetch(`https://expert-space-journey-wr9w6p6jp7wxhv457-1234.app.github.dev/api/business/${id}`, {
@@ -63,6 +63,12 @@ export default async function BusinessPage({ params }) {
                 <span>{business.phone}</span>
               </div>
             )}
+            {business.email && (
+              <div className="flex items-center gap-2">
+                <Mail className="w-4 h-4 text-muted-foreground"/>
+                <span>{business.email}</span>
+              </div>
+            )}
             {business.website && (
               <div className="flex items-center gap-2">
                 <Globe className="w-4 h-4 text-muted-foreground" />
@@ -79,6 +85,18 @@ export default async function BusinessPage({ params }) {
             {business.address && (
               <p className="text-muted-foreground">{business.address}</p>
             )}
+            {business.hours && (
+            <div className="mt-8 text-muted-foreground text-center">
+            <div className="grid-cols-2 gap-x-4 text-left text-sm block">
+            {Object.entries(business.hours).map(([day, hours]) => (
+            <div key={day} className="flex justify-between">
+            <span className="capitalize">{day}</span>
+            <span>{hours}</span>
+            </div>
+            ))}
+            </div>
+            </div>
+             )}
           </CardContent>
         </Card>
         {reviews.length > 0 ? (
