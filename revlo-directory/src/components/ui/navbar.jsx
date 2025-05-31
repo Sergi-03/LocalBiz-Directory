@@ -1,6 +1,5 @@
 import Link from "next/link"
-import { Github } from "lucide-react"
-import { MapPin } from "lucide-react"
+import { Github, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/ui/theme-toogle"
 import SearchBar from "@/components/ui/searchbar"

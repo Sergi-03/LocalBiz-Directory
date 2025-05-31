@@ -18,7 +18,7 @@ export function BusinessCard({ business}) {
     category
   } = business
 
-  const imageUrl = images?.[0] || "https://via.placeholder.com/400x200?text=Business"
+  const imageUrl = images?.[0] || "/og-image.png"
   const Icon = category?.icon ? require("lucide-react")[category.icon] : null
 
 

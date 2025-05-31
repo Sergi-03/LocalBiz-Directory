@@ -6,6 +6,7 @@ import { supabase } from "@/lib/supabaseClient"
 import Navbar from "@/components/ui/navbar"
 import BusinessMap from "@/components/ui/business-map"
 import { Fqa } from "@/components/ui/fqa"
+import Footer from "@/components/ui/footer"
 
 export default function HomePage() {
   const [allBusinesses, setAllBusinesses] = useState([])
@@ -81,6 +82,7 @@ export default function HomePage() {
         </div>
       </section>
       <Fqa/>
+      <Footer/>
     </>
   )
 }

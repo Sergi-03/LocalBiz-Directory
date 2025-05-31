@@ -8,6 +8,18 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: 'Revlo - Find local businesses',
   description: 'Intelligent directory of local businesses with reviews and locations.',
+   openGraph: {
+    title: "Revlo - Find local businesses",
+    description: "Intelligent directory of local businesses with reviews and locations.",
+    images: ["/og-image.png"],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Revlo - Find local businesses",
+    description: "Intelligent directory of local businesses with reviews and locations.",
+    images: ["/og-image.png"],
+  }
 }
 
 export default function RootLayout({ children }) {

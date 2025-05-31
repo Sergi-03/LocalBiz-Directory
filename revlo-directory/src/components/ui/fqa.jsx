@@ -15,7 +15,6 @@ export function Fqa() {
     <Accordion
       type="single"
       collapsible
-      defaultValue="item-1"
       className="w-full"
     >
       <AccordionItem value="item-1">

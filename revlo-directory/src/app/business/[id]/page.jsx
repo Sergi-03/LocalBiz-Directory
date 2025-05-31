@@ -1,6 +1,7 @@
 import Navbar from "@/components/ui/navbar"
 import BusinessChart from "@/components/ui/business-chart"
 import ReviewForm from "@/components/ui/review-form"
+import Footer from "@/components/ui/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Toaster } from "@/components/ui/sonner"
 import Image from "next/image"
@@ -56,7 +57,7 @@ export default async function BusinessPage({ params }) {
           </div>
         </div>
         <Card className="shadow-xl rounded-2xl border-none">
-          <CardContent className="p-6 space-y-4 text-sm flex justify-center inline-grid">
+          <CardContent className="p-6 space-y-4 text-sm flex justify-center inline-grid block">
             {business.phone && (
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-muted-foreground" />
@@ -87,7 +88,7 @@ export default async function BusinessPage({ params }) {
             )}
             {business.hours && (
             <div className="mt-8 text-muted-foreground text-center">
-            <div className="grid-cols-2 gap-x-4 text-left text-sm block">
+            <div className="grid-cols-2 gap-x-5 text-left text-sm block">
             {Object.entries(business.hours).map(([day, hours]) => (
             <div key={day} className="flex justify-between">
             <span className="capitalize">{day}</span>
@@ -128,6 +129,7 @@ export default async function BusinessPage({ params }) {
   <h3 className="text-lg font-semibold mb-4">Business statistics</h3>
   <BusinessChart />
   </section>
+  <Footer/>
     </>
   )
 }
