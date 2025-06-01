@@ -8,6 +8,9 @@ import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
+import { supabase } from "@/lib/supabaseClient"
+import { useRouter } from "next/navigation"
+import { useState, useEffect } from "react"
 
 
 const reviewSchema = z.object({
@@ -18,6 +21,15 @@ const reviewSchema = z.object({
 })
 
 export default function ReviewForm({ businessId }) {
+  const router = useRouter()
+  const [user, setUser] = useState(null)
+
+  useEffect(() => {
+    supabase.auth.getUser().then(({data: {user}}) => {
+      setUser(user)
+    })
+  },[])
+
   const form = useForm({
     resolver: zodResolver(reviewSchema),
     defaultValues: {
@@ -29,6 +41,11 @@ export default function ReviewForm({ businessId }) {
   })
 
   const onSubmit = async (values) => {
+    if(!user){
+      router.push("/login")
+      return
+    }
+
     try {
         const res = await fetch("https://expert-space-journey-wr9w6p6jp7wxhv457-1234.app.github.dev/api/business/reviews",{
             method: "POST",
