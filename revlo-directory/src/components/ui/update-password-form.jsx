@@ -37,7 +37,7 @@ const handleUpdatePassword = async (e) => {
 
     else{
     toast.success("Password updated succesfully!")
-    setTimeout(() => router.push("/login"))
+    setTimeout(() => router.push("/login"), 2000)
     }
 }
 
