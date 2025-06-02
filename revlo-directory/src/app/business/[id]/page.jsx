@@ -1,6 +1,7 @@
 import Navbar from "@/components/ui/navbar"
 import BusinessChart from "@/components/ui/business-chart"
 import ReviewForm from "@/components/ui/review-form"
+import QRCodeDisplay from "@/components/ui/qrcode-display"
 import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
@@ -95,6 +96,9 @@ export default async function BusinessPage({ params }) {
             </div>
             </div>
              )}
+             {business.website && (
+  <QRCodeDisplay url={business.website} />
+)}
           </CardContent>
         </Card>
         {reviews.length > 0 ? (
