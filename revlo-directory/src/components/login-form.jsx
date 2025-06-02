@@ -28,7 +28,10 @@ export function LoginForm({className, ...props}) {
    if(error) {
     toast.error("Login failed")
    }
-   else router.push("/")
+   else {
+    toast.success("Logged in succesfully")
+    setTimeout(() => router.push("/"), 1500)
+   }
   }
 
   return (
@@ -55,7 +58,7 @@ export function LoginForm({className, ...props}) {
                   <a
                   href="/update-password"
                     className="ml-auto inline-block text-sm underline-offset-4 hover:underline">
-                    Forgot your password?
+                    Update your password?
                   </a>
                 </div>
                 <Input id="password" value={password} onChange={(e) => setPassword(e.target.value)} type="password" required />

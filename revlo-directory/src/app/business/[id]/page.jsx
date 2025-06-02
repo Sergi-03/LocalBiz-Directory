@@ -1,9 +1,7 @@
 import Navbar from "@/components/ui/navbar"
 import BusinessChart from "@/components/ui/business-chart"
 import ReviewForm from "@/components/ui/review-form"
-import Footer from "@/components/ui/footer"
 import { Card, CardContent } from "@/components/ui/card"
-import { Toaster } from "@/components/ui/sonner"
 import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
@@ -31,7 +29,6 @@ export default async function BusinessPage({ params }) {
   
   return (
     <>
-      <Toaster position="top-center" closeButton/>
       <Navbar showSearchbar={false} />
       <section className="max-w-5xl mx-auto px-4 py-10 space-y-10">
         <div className="relative w-full aspect-[16/7] rounded-2xl overflow-hidden shadow-md">
@@ -129,7 +126,6 @@ export default async function BusinessPage({ params }) {
   <h3 className="text-lg font-semibold mb-4">Business statistics</h3>
   <BusinessChart />
   </section>
-  <Footer/>
     </>
   )
 }

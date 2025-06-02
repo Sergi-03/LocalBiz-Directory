@@ -29,7 +29,7 @@ export default function SearchBar({ filters = { searchTerm: "", selectedCategory
       : categories.find((cat) => cat.slug === selectedCategory)?.name || "All categories"
 
   return (
-    <div className="flex gap-5 items-center">
+    <div className="searchbar-container flex gap-5 items-center">
       <input
         type="text"
         placeholder="Search business..."
