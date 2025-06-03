@@ -9,7 +9,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { CheckCircle2, Globe, Phone, Mail } from "lucide-react"
 
 async function getBusiness(id) {
-  const res = await fetch(`https://expert-space-journey-wr9w6p6jp7wxhv457-1234.app.github.dev/api/business/${id}`, {
+  const res = await fetch(`https://revlo-backend.onrender.com/api/business/${id}`, {
     cache: "no-store",
   })
   if (!res.ok) throw new Error("Error loading business")
@@ -17,7 +17,7 @@ async function getBusiness(id) {
 }
 
 async function getReview(businessId) {
-  const res = await fetch(`https://expert-space-journey-wr9w6p6jp7wxhv457-1234.app.github.dev/api/business/reviews/business/${businessId}`, {
+  const res = await fetch(`https://revlo-backend.onrender.com/api/business/reviews/business/${businessId}`, {
     cache: "no-store"
   })
   if(!res.ok) throw new Error("Error loading reviews")

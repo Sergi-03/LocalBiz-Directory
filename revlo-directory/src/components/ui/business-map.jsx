@@ -20,7 +20,7 @@ export default function BusinessMap() {
 
   useEffect(() => {
     const fetchBusinesses = async () => {
-      const res = await fetch("https://expert-space-journey-wr9w6p6jp7wxhv457-1234.app.github.dev/api/business")
+      const res = await fetch("https://revlo-backend.onrender.com/api/business")
       const data = await res.json()
       setBusinesses(data)
     }

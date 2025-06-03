@@ -1,5 +1,5 @@
 export async function generateMetadata({ params }) {
-  const res = await fetch(`https://expert-space-journey-wr9w6p6jp7wxhv457-1234.app.github.dev/api/business/${params.id}`)
+  const res = await fetch(`https://revlo-backend.onrender.com/api/business/${params.id}`)
   const business = await res.json()
 
   return {

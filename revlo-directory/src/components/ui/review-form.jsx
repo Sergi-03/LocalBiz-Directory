@@ -47,7 +47,7 @@ export default function ReviewForm({ businessId }) {
     }
 
     try {
-        const res = await fetch("https://expert-space-journey-wr9w6p6jp7wxhv457-1234.app.github.dev/api/business/reviews",{
+        const res = await fetch("https://revlo-backend.onrender.com/api/business/reviews",{
             method: "POST",
             headers: {"Content-type": "application/json"},
             body: JSON.stringify({...values, businessId})
