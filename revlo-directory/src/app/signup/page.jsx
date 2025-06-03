@@ -34,7 +34,7 @@ export default function SignupPage() {
     if (error) {
       toast.error("Signup failed")
     } else {
-      toast.success("Account created successfully!")
+      toast.success("Account created! We've sent a verification link to your email.")
       setTimeout(() => router.push("/login"), 2000)
     }
   }
